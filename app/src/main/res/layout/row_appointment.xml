@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="7dp"
+    android:layout_marginHorizontal="24dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvServiceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/appointment_history_service"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvService"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/tvServiceTitle"
+            app:layout_constraintStart_toEndOf="@id/tvServiceTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Igienizare fasdf asdfas fadsf asfa sdfas dfasd" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvServiceTitle, tvService" />
+
+        <TextView
+            android:id="@+id/tvDateAndTimeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/appointment_history_date_and_time"
+            app:layout_constraintTop_toBottomOf="@id/barrierService"
+            app:layout_constraintStart_toStartOf="@id/tvServiceTitle" />
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/tvDateAndTimeTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvService"
+            app:layout_constraintBottom_toBottomOf="@id/tvDateAndTimeTitle"
+            tools:text="23.03.2023, 08:00-09:00" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDateAndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvDateAndTimeTitle, tvDateAndTime" />
+
+        <TextView
+            android:id="@+id/tvDurationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/appointment_history_duration"
+            app:layout_constraintTop_toBottomOf="@id/barrierDateAndTime"
+            app:layout_constraintStart_toStartOf="@id/tvServiceTitle" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/tvDurationTitle"
+            app:layout_constraintStart_toEndOf="@id/tvDurationTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvService"
+            tools:text="60 min" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvDurationTitle, tvDuration" />
+
+        <TextView
+            android:id="@+id/tvDoctorNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/appointment_history_doctor"
+            app:layout_constraintTop_toBottomOf="@id/barrierDuration"
+            app:layout_constraintStart_toStartOf="@id/tvServiceTitle" />
+
+        <TextView
+            android:id="@+id/tvDoctorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/tvDoctorNameTitle"
+            app:layout_constraintStart_toEndOf="@id/tvDoctorNameTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvService"
+            tools:text="Ioana Brinzei" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierDoctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvDoctorNameTitle, tvDoctorName" />
+
+        <TextView
+            android:id="@+id/tvPatientNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/appointment_history_patient"
+            app:layout_constraintTop_toBottomOf="@id/barrierDoctorName"
+            app:layout_constraintStart_toStartOf="@id/tvServiceTitle" />
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/tvPatientNameTitle"
+            app:layout_constraintStart_toEndOf="@id/tvPatientNameTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvService"
+            tools:text="Ana Popescu" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvPatientNameTitle, tvPatientName" />
+
+        <TextView
+            android:id="@+id/tvPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/appointment_history_price"
+            app:layout_constraintTop_toBottomOf="@id/barrierPatientName"
+            app:layout_constraintStart_toStartOf="@id/tvServiceTitle" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/tvPriceTitle"
+            app:layout_constraintStart_toEndOf="@id/tvPriceTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvService"
+            tools:text="200 lei" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvPriceTitle, tvPrice" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPhotos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="12dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/barrierPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/row_photo"
+            tools:itemCount="5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            app:cornerRadius="12dp"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:text="@string/delete"
+            app:layout_constraintTop_toBottomOf="@id/rvPhotos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

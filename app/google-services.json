@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "604012281303",
+    "firebase_url": "https://stomabooking-ed3ac-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "stomabooking-ed3ac",
+    "storage_bucket": "stomabooking-ed3ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604012281303:android:f1eb47f0b86455b94e5f92",
+        "android_client_info": {
+          "package_name": "com.example.stomabooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604012281303-45rk871db8ea1serv55ovj9br4ohnc2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpHwRm4scLreE-jkeAVSCk3jVY9cwTsT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604012281303-45rk871db8ea1serv55ovj9br4ohnc2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
